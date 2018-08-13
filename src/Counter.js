@@ -1,11 +1,14 @@
 import React from 'react'
+import {connect} from 'react-redux'
+
+
+const mapStateToProps = (state) => ({
+    value: state.counter.counterValue
+})
 
 
 class Counter extends React.Component {
-    state = {
-        value:7
-    }
-
+   
     
 
     render() {
@@ -21,4 +24,4 @@ class Counter extends React.Component {
     }
 }
 
-export default Counter
+export default connect(mapStateToProps, mapDispatchToProps) (Counter)

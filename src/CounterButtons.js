@@ -7,16 +7,9 @@ class CounterButtons extends React.Component {
     render() {
         return (
             <div>
-                    <button
-                    onClick={}
-                     >
-                    ADD
-                    </button>
-                    <button
-                    onClick={}
-                    >
-                    SUB
-                    </button>
+                <button onClick={() => this.dispatch(add())}>ADD</button>
+                <button onClick={() => this.dispatch(sub())}>SUB</button>
+                
             </div>
         )
     }
