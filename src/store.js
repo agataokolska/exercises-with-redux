@@ -1,14 +1,16 @@
 const ADD = 'ADD'
 const SUB = 'SUB'
 
-export const add = () => (
+export const add = (number = 1) => (
     {
-        type: ADD
+        type: ADD,
+        number     //number:number
     })
 
-export const sub = () => (
+export const sub = (number = 1) => (
     {
-        type: SUB
+        type: SUB,
+        number
     })
 
 const INITIAL_STATE = {
@@ -22,9 +24,9 @@ const reducer = (state=INITIAL_STATE, action) => {
         case ADD:
             //return {counterValue: state.counterValue + 1, open:false, list:[]}  different methods returning same object
             //return Object.assign({},state, {counterValue: state.counterValue + 1})
-            return {...state, counterValue: state.counterValue + 1}
+            return {...state, counterValue: state.counterValue + action.number}
         case SUB:
-        return {...state, counterValue: state.counterValue - 1}
+        return {...state, counterValue: state.counterValue - action.number}
         default:
             return state
     }

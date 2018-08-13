@@ -1,24 +1,41 @@
 import React from 'react'
-import {add, sub} from './store'
-import {connect} from 'react-redux'
+import { add, sub } from './store'
+import { connect } from 'react-redux'
 
 
 const mapDispatchToProps = (dispatch) => ({
-    isAdd: () => dispatch(add()),
-    isSub: () => dispatch(sub())
+    isAdd: (number) => dispatch(add(number)),
+    isSub: (number) => dispatch(sub(number)),
+
 })
 
-class CounterButtons extends React.Component { 
+class CounterButtons extends React.Component {
 
+    state= {
+        inputValue: 0
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            inputValue: parseInt(event.target.value) // change string to number
+        })
+    }
     render() {
         return (
             <div>
-                <button onClick={this.props.isAdd}>ADD</button>
-                <button onClick={this.props.isSub}>SUB</button>
-                
+                <div>
+                    <button onClick={() => this.props.isAdd(this.state.inputValue)}>ADD</button>
+                    <button onClick={() => this.props.isSub(this.state.inputValue)}>SUB</button>
+
+                </div>
+                <input
+                type='number'
+                placeholder='write a number here'
+                onChange={this.handleChange}
+                />
             </div>
         )
     }
 }
 
-export default connect(null, mapDispatchToProps) (CounterButtons)
+export default connect(null, mapDispatchToProps)(CounterButtons)
