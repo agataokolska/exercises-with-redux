@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-       <Counter value ={6}/>
+       <Counter />
       </div>
     )
   }
