@@ -6,6 +6,17 @@ class Counter extends React.Component {
         value:7
     }
 
+    addhandler = () => {
+        this.setState({
+            value: this.state.value + 1
+        })
+    }
+
+    dechandler = () => {
+        this.setState({
+            value: this.state.value - 1
+        })
+    }
 
     render() {
         return (
@@ -14,12 +25,12 @@ class Counter extends React.Component {
                 <h2>{this.state.value}</h2>
                 <div>
                     <button
-                        onClick={}
+                        onClick={this.addhandler}
                     >
                         ADD
                     </button>
                     <button
-                        onClick={}
+                        onClick={this.dechandler}
                     >
                         SUB
                     </button>
