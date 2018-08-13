@@ -18,7 +18,7 @@ const INITIAL_STATE = {
 }
 
 const reducer = (state=INITIAL_STATE, action) => {
-    switch (action, type) {
+    switch (action.type) {
         case ADD:
             //return {counterValue: state.counterValue + 1, open:false, list:[]}  different methods returning same object
             //return Object.assign({},state, {counterValue: state.counterValue + 1})
@@ -29,3 +29,5 @@ const reducer = (state=INITIAL_STATE, action) => {
             return state
     }
 }
+
+export default reducer

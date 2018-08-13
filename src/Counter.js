@@ -16,7 +16,7 @@ class Counter extends React.Component {
         return (
             <div>
                 <h1>My great counter:</h1>
-                <h2>{this.state.value}</h2>
+                <h2>{this.props.value}</h2>
                 <div>
                    
                 </div>
