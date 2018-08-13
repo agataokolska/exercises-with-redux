@@ -12,7 +12,7 @@ class Counter extends React.Component {
         })
     }
 
-    dechandler = () => {
+    subhandler = () => {
         this.setState({
             value: this.state.value - 1
         })
@@ -30,7 +30,7 @@ class Counter extends React.Component {
                         ADD
                     </button>
                     <button
-                        onClick={this.dechandler}
+                        onClick={this.subhandler}
                     >
                         SUB
                     </button>
