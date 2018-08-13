@@ -1,11 +1,14 @@
+const ADD = 'ADD'
+const SUB = 'SUB'
+
 const add = () => (
     {
-        type: 'ADD'
+        type: ADD
     })
 
 const sub = () => (
     {
-        type: 'SUB'
+        type: SUB
     })
 
 const INITIAL_STATE = {
@@ -16,11 +19,11 @@ const INITIAL_STATE = {
 
 const reducer = (state=INITIAL_STATE, action) => {
     switch (action, type) {
-        case 'ADD':
+        case ADD:
             //return {counterValue: state.counterValue + 1, open:false, list:[]}  different methods returning same object
             //return Object.assign({},state, {counterValue: state.counterValue + 1})
             return {...state, counterValue: state.counterValue + 1}
-        case 'SUB':
+        case SUB:
         return {...state, counterValue: state.counterValue - 1}
         default:
             return state
