@@ -1,12 +1,12 @@
 const ADD = 'ADD'
 const SUB = 'SUB'
 
-const add = () => (
+export const add = () => (
     {
         type: ADD
     })
 
-const sub = () => (
+export const sub = () => (
     {
         type: SUB
     })

@@ -1,28 +1,19 @@
 import React from 'react'
-
+import {add, sub} from './store'
 
 class CounterButtons extends React.Component {
 
-
-    addhandler = () => {
-        
-      
-    }
-
-    subhandler = () => {
-       
-    }
 
     render() {
         return (
             <div>
                     <button
-                    onClick={this.addhandler}
+                    onClick={}
                      >
                     ADD
                     </button>
                     <button
-                    onClick={this.subhandler}
+                    onClick={}
                     >
                     SUB
                     </button>
