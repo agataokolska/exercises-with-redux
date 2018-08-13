@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 
 const mapStateToProps = (state) => ({
     value: state.counter.counterValue
+
 })
 
 
@@ -24,4 +25,4 @@ class Counter extends React.Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (Counter)
+export default connect(mapStateToProps) (Counter)
